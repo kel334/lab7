@@ -14,6 +14,7 @@ def has_contact(contacts, first_name, last_name):
     contacts.get(first_name)
     contacts.get(last_name)
 
+
 def get_contact_string(contacts, first_name, last_name):
     contacts.get(first_name)
     contacts.get(last_name)
