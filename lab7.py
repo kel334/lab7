@@ -18,8 +18,8 @@ def get_contact_string(contacts, first_name, last_name):
 
 
 def remove_contact(contacts, first_name, last_name):
-   contact.remove(first_name)
-   contact.remove(last_name)
+   contacts.remove(first_name)
+   contacts.remove(last_name)
 
 
 def update_contact_first_name(contacts, first_name, last_name, new_field_value):
