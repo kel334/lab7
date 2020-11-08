@@ -2,25 +2,33 @@
 # Dayra Quinonez (dq53)
 
 
-def main():
+def new_contact_store():
+   contacts = {????
+
+
+def add_new_contact(contacts, first_name, last_name, email, phone_number, birthday):
+
+
+def has_contact(contacts, first_name, last_name):
+
+
+def get_contact_string(contacts, first_name, last_name):
+
+
+def remove_contact(contacts, first_name, last_name):
+
+
+def update_contact_first_name(contacts, first_name, last_name, new_field_value):
 
 
 
-
-# new_contact_store()
-# add_new_contact(contacts, first_name, last_name, email, phone_number, birthday)
-# has_contact(contacts, first_name, last_name)
-# get_contact_string(contacts, first_name, last_name)
-# remove_contact(contacts, first_name, last_name)
-# update_contact_first_name(contacts, first_name, last_name, new_field_value)
-# update_contact_last_name(contacts, first_name, last_name, new_field_value)
-# update_contact_email(contacts, first_name, last_name, new_field_value)
-# update_contact_phone_number(contacts, first_name, last_name, new_field_value)
-# update_contact_birthday(contacts, first_name, last_name, new_field_value)
+def update_contact_last_name(contacts, first_name, last_name, new_field_value):
 
 
+def update_contact_email(contacts, first_name, last_name, new_field_value):
 
 
+def update_contact_phone_number(contacts, first_name, last_name, new_field_value):
 
-if __name__ == '__main__':
-    main()
+
+def update_contact_birthday(contacts, first_name, last_name, new_field_value):
