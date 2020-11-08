@@ -23,15 +23,20 @@ def remove_contact(contacts, first_name, last_name):
 
 
 def update_contact_first_name(contacts, first_name, last_name, new_field_value):
+    contacts.update(first_name)
 
 
 def update_contact_last_name(contacts, first_name, last_name, new_field_value):
+    contacts.update(last_name)
 
 
 def update_contact_email(contacts, first_name, last_name, new_field_value):
+    contacts.update(email)
 
 
 def update_contact_phone_number(contacts, first_name, last_name, new_field_value):
+    contacts.update(phone_number)
 
 
 def update_contact_birthday(contacts, first_name, last_name, new_field_value):
+    contacts.update(contact_birthday)
