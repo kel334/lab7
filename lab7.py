@@ -3,8 +3,8 @@
 
 
 def new_contact_store():
-    new_contacts = {}
-
+    contacts = {}
+    return contacts
 
 def add_new_contact(contacts, first_name, last_name, email, phone_number, birthday):
     contacts[""] = first_name, last_name, email, phone_number, birthday
