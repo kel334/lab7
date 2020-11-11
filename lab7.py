@@ -8,7 +8,12 @@ def new_contact_store():
 
 def add_new_contact(contacts, first_name, last_name, email, phone_number, birthday):
     key = first_name + last_name
-    contacts[key] = [first_name, last_name, email, phone_number, birthday]
+    contacts[key] = { "First" : first_name,
+                      "Last" : last_name,
+                      "Email" : email,
+                      "Number" : phone_number,
+                      "Birthdate" : birthday
+                      }
     return contacts
 
 
@@ -22,7 +27,7 @@ def has_contact(contacts, first_name, last_name):
 
 def get_contact_string(contacts, first_name, last_name):
     key = first_name + last_name
-    return contacts[key]
+    return contacts.get(key)
 
 
 def remove_contact(contacts, first_name, last_name):
@@ -32,7 +37,10 @@ def remove_contact(contacts, first_name, last_name):
 
 
 def update_contact_first_name(contacts, first_name, last_name, new_field_value):
-   pass
+    key = first_name + last_name
+    contacts[key]["First"] = new_field_value
+    return contacts
+
 
 def update_contact_last_name(contacts, first_name, last_name, new_field_value):
    last_name = new_field_value
