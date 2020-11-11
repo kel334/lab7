@@ -41,31 +41,27 @@ def update_contact_first_name(contacts, first_name, last_name, new_field_value):
     new_key = new_field_value + last_name
     contacts[key]["First Name"] = new_field_value
     contacts[new_key] = contacts[key]
-
     return contacts
 
 
 def update_contact_last_name(contacts, first_name, last_name, new_field_value):
     key = first_name + last_name
-
-    updated = contacts.update(last_name)
-    return updated
+    new_key = first_name + new_field_value
+    contacts[key]["Last Name"] = new_field_value
+    contacts[new_key] = contacts[key]
+    return contacts
 
 def update_contact_email(contacts, first_name, last_name, new_field_value):
     key = first_name + last_name
-
-    updated = contacts.update(email)
-    return updated
+    contacts[key]["Email"] = new_field_value
+    return contacts
 
 def update_contact_phone_number(contacts, first_name, last_name, new_field_value):
     key = first_name + last_name
-
-    phone_number = new_field_value
-    updated = contacts.update(phone_number)
-    return updated
+    contacts[key]["Phone Number"] = new_field_value
+    return contacts
 
 def update_contact_birthday(contacts, first_name, last_name, new_field_value):
     key = first_name + last_name
-
-    updated = contacts.update(birthday)
-    return updated
+    contacts[key]["Birthday"] = new_field_value
+    return contacts
