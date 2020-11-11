@@ -3,45 +3,53 @@
 
 
 def new_contact_store():
-    contacts = {}
-    return contacts
+    return {}
+
 
 def add_new_contact(contacts, first_name, last_name, email, phone_number, birthday):
-    contacts[""] = first_name, last_name, email, phone_number, birthday
+    key = first_name + last_name
+    contacts[key] = [first_name, last_name, email, phone_number, birthday]
+    return contacts
 
 
 def has_contact(contacts, first_name, last_name):
-    contacts.get(first_name)
-    contacts.get(last_name)
+    key = first_name + last_name
+    if key in contacts:
+        return True
+    else:
+        return False
 
 
 def get_contact_string(contacts, first_name, last_name):
-    contacts.get(first_name)
-    contacts.get(last_name)
+    key = first_name + last_name
+    return contacts[key]
 
 
 def remove_contact(contacts, first_name, last_name):
-   contacts.remove(first_name)
-   contacts.remove(last_name)
+    key = first_name + last_name
+    del contacts[key]
+    return contacts
 
 
 def update_contact_first_name(contacts, first_name, last_name, new_field_value):
-   first_name = new_field_value
-   contacts.update(first_name)
-
+   pass
 
 def update_contact_last_name(contacts, first_name, last_name, new_field_value):
    last_name = new_field_value
-   contacts.update(last_name)
+   updated = contacts.update(last_name)
+   return updated
 
 def update_contact_email(contacts, first_name, last_name, new_field_value):
    email = new_field_value
-   contacts.update(email)
+   updated = contacts.update(email)
+   return updated
 
 def update_contact_phone_number(contacts, first_name, last_name, new_field_value):
    phone_number = new_field_value
-   contacts.update(phone_number)
+   updated = contacts.update(phone_number)
+   return updated
 
 def update_contact_birthday(contacts, first_name, last_name, new_field_value):
    birthday = new_field_value
-   contacts.update(birthday)
+   updated = contacts.update(birthday)
+   return updated
